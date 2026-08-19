@@ -25,8 +25,10 @@ const fieldClass = "mt-2 bg-background/60";
 
 export function Reservation() {
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [submitting, setSubmitting] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
 
-  function onSubmit(e: FormEvent<HTMLFormElement>) {
+  async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = new FormData(e.currentTarget);
     const parsed = schema.safeParse(Object.fromEntries(form));
@@ -41,21 +43,29 @@ export function Reservation() {
 
     setErrors({});
     const d = parsed.data;
-    const body = [
-      `Name: ${d.name}`,
-      `Phone: ${d.phone}`,
-      `Date: ${d.date}`,
-      `Time: ${d.time}`,
-      `Guests: ${d.guests}`,
-      `Special request: ${d.request || "-"}`,
-    ].join("\n");
+    setSubmitting(true);
 
-    window.location.href = `mailto:${RESTAURANT.email}?subject=${encodeURIComponent(
-      `Table reservation — ${d.name} (${d.date} ${d.time})`,
-    )}&body=${encodeURIComponent(body)}`;
+    const { error } = await supabase.from("reservations").insert({
+      name: d.name,
+      phone: d.phone,
+      reservation_date: d.date,
+      reservation_time: d.time,
+      guests: d.guests,
+      request: d.request?.trim() ? d.request.trim() : null,
+    });
 
-    toast.success("Opening your email app to send the request", {
-      description: `You can also call ${RESTAURANT.phone} to confirm instantly.`,
+    setSubmitting(false);
+
+    if (error) {
+      toast.error("We couldn't send your request", {
+        description: `Please call ${RESTAURANT.phone} and we'll book you in.`,
+      });
+      return;
+    }
+
+    formRef.current?.reset();
+    toast.success("Reservation request received", {
+      description: `Our team will confirm shortly. Need it faster? Call ${RESTAURANT.phone}.`,
     });
   }
 
