@@ -1,24 +1,62 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Hero } from "@/components/site/Hero";
+import { QuickInfo } from "@/components/site/QuickInfo";
+import { About } from "@/components/site/About";
+import { Menu } from "@/components/site/Menu";
+import { Reservation } from "@/components/site/Reservation";
+import { Footer } from "@/components/site/Footer";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+const title = "Crave Cafe & Restaurant | Italian Dining on Gabon St, Addis Ababa";
+const description =
+  "Handmade pasta, stone-baked pizza and perfectly seasoned chicken on Gabon Street, Addis Ababa. View the menu and reserve your table at Crave Cafe & Restaurant.";
+
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title },
+      { name: "description", content: description },
+      { property: "og:title", content: title },
+      { property: "og:description", content: description },
+      { property: "og:type", content: "restaurant" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
+    <main>
+      <Hero />
+      <QuickInfo />
+      <About />
+      <Menu />
+      <Reservation />
+      <Footer />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Restaurant",
+            name: "Crave Cafe & Restaurant",
+            servesCuisine: "Italian",
+            telephone: "+251905363336",
+            priceRange: "$$",
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: "Gabon St",
+              addressLocality: "Addis Ababa",
+              addressCountry: "ET",
+            },
+            aggregateRating: {
+              "@type": "AggregateRating",
+              ratingValue: "4.3",
+              reviewCount: "195",
+            },
+          }),
+        }}
       />
-    </div>
+    </main>
   );
 }
