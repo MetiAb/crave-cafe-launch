@@ -85,27 +85,27 @@ export function Reservation() {
             <div className="sm:col-span-2">
               <Label htmlFor="name">Full name</Label>
               <Input id="name" name="name" maxLength={80} placeholder="Your name" className={fieldClass} />
-              {errors.name && <p className="mt-1 text-xs text-destructive">{errors.name}</p>}
+              {errors['name'] && <p className="mt-1 text-xs text-destructive">{errors['name']}</p>}
             </div>
             <div>
               <Label htmlFor="phone">Phone</Label>
               <Input id="phone" name="phone" type="tel" maxLength={25} placeholder="09xx xxx xxx" className={fieldClass} />
-              {errors.phone && <p className="mt-1 text-xs text-destructive">{errors.phone}</p>}
+              {errors['phone'] && <p className="mt-1 text-xs text-destructive">{errors['phone']}</p>}
             </div>
             <div>
               <Label htmlFor="guests">Guests</Label>
               <Input id="guests" name="guests" type="number" min={1} max={40} defaultValue={2} className={fieldClass} />
-              {errors.guests && <p className="mt-1 text-xs text-destructive">{errors.guests}</p>}
+              {errors['guests'] && <p className="mt-1 text-xs text-destructive">{errors['guests']}</p>}
             </div>
             <div>
               <Label htmlFor="date">Date</Label>
               <Input id="date" name="date" type="date" className={fieldClass} />
-              {errors.date && <p className="mt-1 text-xs text-destructive">{errors.date}</p>}
+              {errors['date'] && <p className="mt-1 text-xs text-destructive">{errors['date']}</p>}
             </div>
             <div>
               <Label htmlFor="time">Time</Label>
               <Input id="time" name="time" type="time" className={fieldClass} />
-              {errors.time && <p className="mt-1 text-xs text-destructive">{errors.time}</p>}
+              {errors['time'] && <p className="mt-1 text-xs text-destructive">{errors['time']}</p>}
             </div>
             <div className="sm:col-span-2">
               <Label htmlFor="request">Special request</Label>
@@ -117,7 +117,7 @@ export function Reservation() {
                 placeholder="Birthday table, dietary needs, seating preference…"
                 className={fieldClass}
               />
-              {errors.request && <p className="mt-1 text-xs text-destructive">{errors.request}</p>}
+              {errors['request'] && <p className="mt-1 text-xs text-destructive">{errors['request']}</p>}
             </div>
           </div>
 
