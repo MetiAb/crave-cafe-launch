@@ -1,4 +1,4 @@
-import { useState, type FormEvent } from "react";
+import { useState, useRef, type FormEvent } from "react";
 import { toast } from "sonner";
 import { z } from "zod";
 import { Button } from "@/components/ui/button";
@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { RESTAURANT } from "@/data/menu";
+import { supabase } from "@/integrations/supabase/client";
 
 const schema = z.object({
   name: z.string().trim().min(2, "Please enter your name").max(80, "Name is too long"),
@@ -24,8 +25,10 @@ const fieldClass = "mt-2 bg-background/60";
 
 export function Reservation() {
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [submitting, setSubmitting] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
 
-  function onSubmit(e: FormEvent<HTMLFormElement>) {
+  async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = new FormData(e.currentTarget);
     const parsed = schema.safeParse(Object.fromEntries(form));
@@ -40,21 +43,29 @@ export function Reservation() {
 
     setErrors({});
     const d = parsed.data;
-    const body = [
-      `Name: ${d.name}`,
-      `Phone: ${d.phone}`,
-      `Date: ${d.date}`,
-      `Time: ${d.time}`,
-      `Guests: ${d.guests}`,
-      `Special request: ${d.request || "-"}`,
-    ].join("\n");
+    setSubmitting(true);
 
-    window.location.href = `mailto:${RESTAURANT.email}?subject=${encodeURIComponent(
-      `Table reservation — ${d.name} (${d.date} ${d.time})`,
-    )}&body=${encodeURIComponent(body)}`;
+    const { error } = await supabase.from("reservations").insert({
+      name: d.name,
+      phone: d.phone,
+      reservation_date: d.date,
+      reservation_time: d.time,
+      guests: d.guests,
+      request: d.request?.trim() ? d.request.trim() : null,
+    });
 
-    toast.success("Opening your email app to send the request", {
-      description: `You can also call ${RESTAURANT.phone} to confirm instantly.`,
+    setSubmitting(false);
+
+    if (error) {
+      toast.error("We couldn't send your request", {
+        description: `Please call ${RESTAURANT.phone} and we'll book you in.`,
+      });
+      return;
+    }
+
+    formRef.current?.reset();
+    toast.success("Reservation request received", {
+      description: `Our team will confirm shortly. Need it faster? Call ${RESTAURANT.phone}.`,
     });
   }
 
@@ -80,7 +91,7 @@ export function Reservation() {
           </p>
         </div>
 
-        <form onSubmit={onSubmit} noValidate className="rounded-xl surface-card p-7 md:p-9">
+        <form ref={formRef} onSubmit={onSubmit} noValidate className="rounded-xl surface-card p-7 md:p-9">
           <div className="grid gap-5 sm:grid-cols-2">
             <div className="sm:col-span-2">
               <Label htmlFor="name">Full name</Label>
@@ -121,8 +132,8 @@ export function Reservation() {
             </div>
           </div>
 
-          <Button type="submit" size="lg" className="mt-7 w-full">
-            Reserve table
+          <Button type="submit" size="lg" disabled={submitting} className="mt-7 w-full">
+            {submitting ? "Sending request…" : "Reserve table"}
           </Button>
         </form>
       </div>
