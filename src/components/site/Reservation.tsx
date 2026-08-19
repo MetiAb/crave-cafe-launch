@@ -91,7 +91,7 @@ export function Reservation() {
           </p>
         </div>
 
-        <form onSubmit={onSubmit} noValidate className="rounded-xl surface-card p-7 md:p-9">
+        <form ref={formRef} onSubmit={onSubmit} noValidate className="rounded-xl surface-card p-7 md:p-9">
           <div className="grid gap-5 sm:grid-cols-2">
             <div className="sm:col-span-2">
               <Label htmlFor="name">Full name</Label>
