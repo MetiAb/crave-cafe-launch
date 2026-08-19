@@ -132,8 +132,8 @@ export function Reservation() {
             </div>
           </div>
 
-          <Button type="submit" size="lg" className="mt-7 w-full">
-            Reserve table
+          <Button type="submit" size="lg" disabled={submitting} className="mt-7 w-full">
+            {submitting ? "Sending request…" : "Reserve table"}
           </Button>
         </form>
       </div>
