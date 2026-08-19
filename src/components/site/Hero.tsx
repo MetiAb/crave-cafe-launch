@@ -1,5 +1,5 @@
 import { Star } from "lucide-react";
-import heroImg from "@/assets/hero-pasta.jpg";
+import heroAsset from "@/assets/pasta-pesto.jpg.asset.json";
 import { Button } from "@/components/ui/button";
 import { RESTAURANT } from "@/data/menu";
 
@@ -7,10 +7,10 @@ export function Hero() {
   return (
     <header className="relative isolate min-h-[92vh] overflow-hidden">
       <img
-        src={heroImg}
-        alt="Handmade tagliatelle with slow-cooked ragu served at Crave Cafe & Restaurant"
-        width={1600}
-        height={1104}
+        src={heroAsset.url}
+        alt="Creamy pesto tagliatelle with chicken served at Crave Cafe & Restaurant"
+        width={1080}
+        height={720}
         className="absolute inset-0 -z-20 h-full w-full object-cover"
       />
       <div className="hero-veil absolute inset-0 -z-10" />
