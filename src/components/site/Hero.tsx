@@ -26,8 +26,8 @@ export function Hero() {
           <a href="#about" className="transition-colors hover:text-foreground">
             Our Story
           </a>
-          <a href="#reserve" className="transition-colors hover:text-foreground">
-            Reservations
+          <a href="#reviews" className="transition-colors hover:text-foreground">
+            Reviews
           </a>
         </div>
         <Button asChild size="sm">

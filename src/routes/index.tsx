@@ -3,6 +3,7 @@ import { Hero } from "@/components/site/Hero";
 import { QuickInfo } from "@/components/site/QuickInfo";
 import { About } from "@/components/site/About";
 import { Menu } from "@/components/site/Menu";
+import { Reviews } from "@/components/site/Reviews";
 import { Reservation } from "@/components/site/Reservation";
 import { Footer } from "@/components/site/Footer";
 
@@ -31,6 +32,7 @@ function Index() {
       <QuickInfo />
       <About />
       <Menu />
+      <Reviews />
       <Reservation />
       <Footer />
       <script
