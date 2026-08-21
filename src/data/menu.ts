@@ -350,7 +350,7 @@ export const RESTAURANT = {
   phoneAlt: "+251 11 557 4853",
   phoneAltHref: "tel:+251115574853",
 
-  email: "reservations@cravecafe.et",
+  email: "metiabera24@gmail.com",
   address: "Gabon St, Addis Ababa",
   mapsHref: "https://www.google.com/maps/search/?api=1&query=Crave+Cafe+%26+Restaurant+Gabon+St+Addis+Ababa",
   hours: "Open daily · Closes 10:00 PM",
