@@ -41,6 +41,12 @@ export function Footer() {
           >
             <Phone className="h-4 w-4 text-primary" /> {RESTAURANT.phone}
           </a>
+          <a
+            href={RESTAURANT.phoneAltHref}
+            className="flex items-center gap-2 text-muted-foreground transition-colors hover:text-foreground"
+          >
+            <Phone className="h-4 w-4 text-primary" /> {RESTAURANT.phoneAlt}
+          </a>
           <p className="text-muted-foreground">{RESTAURANT.hours}</p>
         </div>
       </div>

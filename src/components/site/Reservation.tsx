@@ -83,8 +83,13 @@ export function Reservation() {
             booking. Prefer to speak with us? Call{" "}
             <a href={RESTAURANT.phoneHref} className="text-primary hover:underline">
               {RESTAURANT.phone}
+            </a>{" "}
+            or{" "}
+            <a href={RESTAURANT.phoneAltHref} className="text-primary hover:underline">
+              {RESTAURANT.phoneAlt}
             </a>
             .
+
           </p>
           <p className="mt-6 text-sm text-muted-foreground">
             {RESTAURANT.address} · {RESTAURANT.hours}
