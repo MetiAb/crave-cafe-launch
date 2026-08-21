@@ -2,12 +2,17 @@ import interiorAsset from "@/assets/interior-night.jpg.asset.json";
 import trioAsset from "@/assets/pasta-trio.jpg.asset.json";
 import lasagnaAsset from "@/assets/lasagna.jpg.asset.json";
 import loftAsset from "@/assets/interior-loft.jpg.asset.json";
+import windowAsset from "@/assets/cafe-window.jpg.asset.json";
+import mezzanineAsset from "@/assets/cafe-mezzanine.jpg.asset.json";
 
 const highlights = [
   { img: trioAsset.url, title: "The pasta trio", copy: "Ragu, pesto penne and ravioli on one plate." },
   { img: lasagnaAsset.url, title: "Bubbling lasagna", copy: "Baked golden, layered with rich ragu." },
   { img: loftAsset.url, title: "Loft seating", copy: "Mezzanine tables above the café floor." },
+  { img: windowAsset.url, title: "Window counter", copy: "Bar stools with a view over Gabon Street." },
+  { img: mezzanineAsset.url, title: "The café floor", copy: "Marble tables, open kitchen, easy light." },
 ];
+
 
 export function About() {
   return (
@@ -53,7 +58,7 @@ export function About() {
             height={1020}
             className="w-full rounded-xl object-cover shadow-[var(--shadow-lush)]"
           />
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
             {highlights.map((h) => (
               <figure key={h.title} className="overflow-hidden rounded-xl surface-card">
                 <img

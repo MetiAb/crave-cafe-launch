@@ -1,5 +1,6 @@
 import { Star } from "lucide-react";
 import heroAsset from "@/assets/pasta-pesto.jpg.asset.json";
+import logoAsset from "@/assets/crave-logo.jpg.asset.json";
 import { Button } from "@/components/ui/button";
 import { RESTAURANT } from "@/data/menu";
 
@@ -16,9 +17,19 @@ export function Hero() {
       <div className="hero-veil absolute inset-0 -z-10" />
 
       <nav className="relative z-10 mx-auto flex max-w-6xl items-center justify-between px-6 py-7">
-        <span className="font-display text-xl tracking-wide">
-          Crave<span className="text-gradient-ember"> Cafe</span>
-        </span>
+        <a href="#" className="flex items-center gap-3">
+          <img
+            src={logoAsset.url}
+            alt="Crave Cafe & Restaurant logo"
+            width={96}
+            height={96}
+            className="h-11 w-11 rounded-full object-cover"
+          />
+          <span className="font-display text-xl tracking-wide">
+            Crave<span className="text-gradient-ember"> Cafe</span>
+          </span>
+        </a>
+
         <div className="hidden items-center gap-8 text-sm text-muted-foreground md:flex">
           <a href="#menu" className="transition-colors hover:text-foreground">
             Menu

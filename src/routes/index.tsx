@@ -43,7 +43,7 @@ function Index() {
             "@type": "Restaurant",
             name: "Crave Cafe & Restaurant",
             servesCuisine: "Italian",
-            telephone: "+251905363336",
+            telephone: ["+251905363336", "+251115574853"],
             priceRange: "$$",
             address: {
               "@type": "PostalAddress",

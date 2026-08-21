@@ -14,8 +14,9 @@ const items = [
     label: "Call or order",
     value: RESTAURANT.phone,
     href: RESTAURANT.phoneHref,
-    action: "Tap to call",
+    action: `Also ${RESTAURANT.phoneAlt}`,
   },
+
   {
     icon: Clock,
     label: "Opening hours",
