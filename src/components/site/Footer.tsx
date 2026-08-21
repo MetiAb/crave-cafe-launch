@@ -1,19 +1,31 @@
 import { MapPin, Phone } from "lucide-react";
 import { RESTAURANT } from "@/data/menu";
+import logoAsset from "@/assets/crave-logo.jpg.asset.json";
 
 export function Footer() {
   return (
     <footer className="border-t border-border bg-surface/60">
       <div className="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-14 md:flex-row md:items-end md:justify-between">
         <div>
-          <p className="font-display text-2xl">
-            Crave<span className="text-gradient-ember"> Cafe &amp; Restaurant</span>
-          </p>
+          <div className="flex items-center gap-3">
+            <img
+              src={logoAsset.url}
+              alt="Crave Cafe & Restaurant logo"
+              width={96}
+              height={96}
+              loading="lazy"
+              className="h-12 w-12 rounded-full object-cover"
+            />
+            <p className="font-display text-2xl">
+              Crave<span className="text-gradient-ember"> Cafe &amp; Restaurant</span>
+            </p>
+          </div>
           <p className="mt-3 max-w-sm text-sm text-muted-foreground">
             Italian kitchen and café on Gabon Street, Addis Ababa. Breakfast, lunch and dinner —
             served with warmth.
           </p>
         </div>
+
         <div className="space-y-2 text-sm">
           <a
             href={RESTAURANT.mapsHref}
