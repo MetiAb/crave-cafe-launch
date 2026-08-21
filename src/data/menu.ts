@@ -347,6 +347,9 @@ export const RESTAURANT = {
   name: "Crave Cafe & Restaurant",
   phone: "090 536 3336",
   phoneHref: "tel:+251905363336",
+  phoneAlt: "+251 11 557 4853",
+  phoneAltHref: "tel:+251115574853",
+
   email: "reservations@cravecafe.et",
   address: "Gabon St, Addis Ababa",
   mapsHref: "https://www.google.com/maps/search/?api=1&query=Crave+Cafe+%26+Restaurant+Gabon+St+Addis+Ababa",
