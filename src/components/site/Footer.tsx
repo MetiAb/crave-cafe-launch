@@ -1,4 +1,4 @@
-import { MapPin, Phone } from "lucide-react";
+import { Instagram, MapPin, Phone } from "lucide-react";
 import { RESTAURANT } from "@/data/menu";
 import logoAsset from "@/assets/crave-logo.jpg.asset.json";
 
@@ -46,6 +46,14 @@ export function Footer() {
             className="flex items-center gap-2 text-muted-foreground transition-colors hover:text-foreground"
           >
             <Phone className="h-4 w-4 text-primary" /> {RESTAURANT.phoneAlt}
+          </a>
+          <a
+            href={RESTAURANT.instagramHref}
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center gap-2 text-muted-foreground transition-colors hover:text-foreground"
+          >
+            <Instagram className="h-4 w-4 text-primary" /> {RESTAURANT.instagram}
           </a>
           <p className="text-muted-foreground">{RESTAURANT.hours}</p>
         </div>

@@ -53,7 +53,7 @@ export function Hero() {
           <span className="block text-gradient-ember">served like family.</span>
         </h1>
         <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
-          A true Italian gem tucked away on Gabon Street — expertly crafted pasta, perfectly
+          A true Italian gem tucked away on Gabon Street expertly crafted pasta, perfectly
           seasoned chicken, crisp vibrant salads and an ambiance that blends comfort with style.
         </p>
 

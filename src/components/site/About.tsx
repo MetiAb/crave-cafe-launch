@@ -4,6 +4,7 @@ import lasagnaAsset from "@/assets/lasagna.jpg.asset.json";
 import loftAsset from "@/assets/interior-loft.jpg.asset.json";
 import windowAsset from "@/assets/cafe-window.jpg.asset.json";
 import mezzanineAsset from "@/assets/cafe-mezzanine.jpg.asset.json";
+import { RESTAURANT } from "@/data/menu";
 
 const highlights = [
   { img: trioAsset.url, title: "The pasta trio", copy: "Ragu, pesto penne and ravioli on one plate." },
@@ -76,6 +77,14 @@ export function About() {
               </figure>
             ))}
           </div>
+          <a
+            href={RESTAURANT.instagramHref}
+            target="_blank"
+            rel="noreferrer"
+            className="mt-5 inline-block text-sm text-primary underline-offset-4 transition-colors hover:text-gold hover:underline"
+          >
+            Follow us on Instagram
+          </a>
         </div>
       </div>
     </section>

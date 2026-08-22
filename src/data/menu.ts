@@ -345,6 +345,8 @@ export const MENU_ITEMS: MenuItem[] = [
 
 export const RESTAURANT = {
   name: "Crave Cafe & Restaurant",
+  instagram: "@crave_cafeandrestaurant",
+  instagramHref: "https://www.instagram.com/crave_cafeandrestaurant?igsi=MXJ1ZDh3OHIwaXpzaQ==",
   phone: "090 536 3336",
   phoneHref: "tel:+251905363336",
   phoneAlt: "+251 11 557 4853",
