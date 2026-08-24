@@ -1,6 +1,5 @@
 import { Instagram, MapPin, Phone } from "lucide-react";
 import { RESTAURANT } from "@/data/menu";
-import logoAsset from "@/assets/crave-logo.jpg.asset.json";
 
 export function Footer() {
   return (
@@ -9,7 +8,7 @@ export function Footer() {
         <div>
           <div className="flex items-center gap-3">
             <img
-              src={logoAsset.url}
+              src="/images/favicon.png"
               alt="Crave Cafe & Restaurant logo"
               width={96}
               height={96}
@@ -21,7 +20,7 @@ export function Footer() {
             </p>
           </div>
           <p className="mt-3 max-w-sm text-sm text-muted-foreground">
-            Italian kitchen and café on Gabon Street, Addis Ababa. Breakfast, lunch and dinner —
+            Italian kitchen and café on Gabon Street, Addis Ababa. Breakfast, lunch and dinner 
             served with warmth.
           </p>
         </div>

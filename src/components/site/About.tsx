@@ -1,17 +1,11 @@
-import interiorAsset from "@/assets/interior-night.jpg.asset.json";
-import trioAsset from "@/assets/pasta-trio.jpg.asset.json";
-import lasagnaAsset from "@/assets/lasagna.jpg.asset.json";
-import loftAsset from "@/assets/interior-loft.jpg.asset.json";
-import windowAsset from "@/assets/cafe-window.jpg.asset.json";
-import mezzanineAsset from "@/assets/cafe-mezzanine.jpg.asset.json";
 import { RESTAURANT } from "@/data/menu";
 
 const highlights = [
-  { img: trioAsset.url, title: "The pasta trio", copy: "Ragu, pesto penne and ravioli on one plate." },
-  { img: lasagnaAsset.url, title: "Bubbling lasagna", copy: "Baked golden, layered with rich ragu." },
-  { img: loftAsset.url, title: "Loft seating", copy: "Mezzanine tables above the café floor." },
-  { img: windowAsset.url, title: "Window counter", copy: "Bar stools with a view over Gabon Street." },
-  { img: mezzanineAsset.url, title: "The café floor", copy: "Marble tables, open kitchen, easy light." },
+  { img: "/images/unnamed-4.jpg", title: "The pasta trio", copy: "Ragu, pesto penne and ravioli on one plate." },
+  { img: "/images/ACvplmNBJwz4CHLNDxaoRUoGPZtwx21a4IvtBzIC43jmyOaEhbDLPLCjTfbaakQ3JQaNEbc35CPAJtu39F6nY5lsYOzBzFVkDfKSKn_oybnf8-iTJ-Qxk7fIHECP.jpg", title: "Bubbling lasagna", copy: "Baked golden, layered with rich ragu." },
+  { img: "/images/unnamed.jpg", title: "Loft seating", copy: "Mezzanine tables above the café floor." },
+  { img: "/images/IMG_0092.jpg", title: "Window counter", copy: "Bar stools with a view over Gabon Street." },
+  { img: "/images/IMG_0093.jpg", title: "The café floor", copy: "Marble tables, open kitchen, easy light." },
 ];
 
 
@@ -52,7 +46,7 @@ export function About() {
 
         <div className="space-y-4">
           <img
-            src={interiorAsset.url}
+            src="/images/unnamed-2.jpg"
             alt="Glass-fronted dining room at Crave Cafe & Restaurant on Gabon Street"
             loading="lazy"
             width={1360}

@@ -1,14 +1,15 @@
 import { Star } from "lucide-react";
-import heroAsset from "@/assets/pasta-pesto.jpg.asset.json";
-import logoAsset from "@/assets/crave-logo.jpg.asset.json";
 import { Button } from "@/components/ui/button";
 import { RESTAURANT } from "@/data/menu";
+
+const heroImage = "/images/unnamed-3.jpg";
+const logoImage = "/images/favicon.png";
 
 export function Hero() {
   return (
     <header className="relative isolate min-h-[92vh] overflow-hidden">
       <img
-        src={heroAsset.url}
+        src={heroImage}
         alt="Creamy pesto tagliatelle with chicken served at Crave Cafe & Restaurant"
         width={1080}
         height={720}
@@ -19,7 +20,7 @@ export function Hero() {
       <nav className="relative z-10 mx-auto flex max-w-6xl items-center justify-between px-6 py-7">
         <a href="#" className="flex items-center gap-3">
           <img
-            src={logoAsset.url}
+            src={logoImage}
             alt="Crave Cafe & Restaurant logo"
             width={96}
             height={96}
