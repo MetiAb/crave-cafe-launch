@@ -7,9 +7,9 @@ import { Reviews } from "@/components/site/Reviews";
 import { Reservation } from "@/components/site/Reservation";
 import { Footer } from "@/components/site/Footer";
 
-const title = "Crave Cafe & Restaurant | Italian Dining on Gabon St, Addis Ababa";
+const title = "Caffè Bella & Restaurant | Italian Dining on Gabon St, Addis Ababa";
 const description =
-  "Handmade pasta, stone-baked pizza and perfectly seasoned chicken on Gabon Street, Addis Ababa. View the menu and reserve your table at Crave Cafe & Restaurant.";
+  "Handmade pasta, stone-baked pizza and perfectly seasoned chicken on Gabon Street, Addis Ababa. View the menu and reserve your table at Caffè Bella & Restaurant.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -41,7 +41,7 @@ function Index() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Restaurant",
-            name: "Crave Cafe & Restaurant",
+            name: "Caffè Bella & Restaurant",
             servesCuisine: "Italian",
             telephone: ["+251905363336", "+251115574853"],
             priceRange: "$$",

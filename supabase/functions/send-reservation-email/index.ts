@@ -33,7 +33,7 @@ Deno.serve(async (request) => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        from: "Crave Cafe bookings <onboarding@resend.dev>",
+        from: "Caffè Bella bookings <onboarding@resend.dev>",
         to: [recipient],
         subject: `New table reservation for ${reservation.date}`,
         text: [

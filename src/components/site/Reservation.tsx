@@ -37,7 +37,7 @@ export function Reservation() {
           </h2>
           <div className="rule-gold my-7 w-40" />
           <p className="text-muted-foreground leading-relaxed">
-            Planning a visit to Crave Café? We recommend reserving your table in advance so we can
+            Planning a visit to Caffè Bella? We recommend reserving your table in advance so we can
             have everything ready for you.
           </p>
           <p className="mt-6 font-display text-xl">Choose how you&apos;d like to reserve:</p>

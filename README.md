@@ -1,5 +1,5 @@
-Crave Cafe
-A modern, responsive restaurant website for Crave Cafe, designed to provide customers with an easy way to explore the restaurant, view its menu, learn about the restaurant, find its location, and get in touch.
+Caffè Bella
+A modern, responsive restaurant website for Caffè Bella, designed to provide customers with an easy way to explore the restaurant, view its menu, learn about the restaurant, find its location, and get in touch.
 Features
 Responsive design for desktop, tablet, and mobile
 Restaurant information and introduction
@@ -66,4 +66,4 @@ Customer accounts
 Additional restaurant locations
 Analytics and reporting
 License
-This project is developed for Crave Cafe.
+This project is developed for Caffè Bella.

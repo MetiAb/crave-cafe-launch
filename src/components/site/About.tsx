@@ -20,12 +20,12 @@ export function About() {
           </h2>
           <div className="rule-gold my-7 w-40" />
           <p className="text-muted-foreground leading-relaxed">
-            Every plate at Crave is a celebration of authentic flavors, made even more memorable by
+            Every plate at Caffè Bella is a celebration of authentic flavors, made even more memorable by
             the warm, attentive service from the owners and team. Guests are treated to crisp,
             vibrant salads and an inviting ambiance that blends comfort with style.
           </p>
           <p className="mt-4 text-muted-foreground leading-relaxed">
-            Whether you're stopping by for a leisurely lunch or a special dinner, Crave delivers a
+            Whether you're stopping by for a leisurely lunch or a special dinner, Caffè Bella delivers a
             dining experience that is consistently delicious, delightfully cozy, and absolutely
             worth savoring.
           </p>
@@ -47,7 +47,7 @@ export function About() {
         <div className="space-y-4">
           <img
             src="/images/unnamed-2.jpg"
-            alt="Glass-fronted dining room at Crave Cafe & Restaurant on Gabon Street"
+            alt="Glass-fronted dining room at Caffè Bella & Restaurant on Gabon Street"
             loading="lazy"
             width={1360}
             height={1020}

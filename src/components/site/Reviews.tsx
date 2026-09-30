@@ -59,8 +59,8 @@ export function Reviews() {
       <div className="mt-8 grid gap-6 lg:grid-cols-3">
         <div className="overflow-hidden rounded-xl border border-border lg:col-span-2">
           <iframe
-            title="Crave Cafe & Restaurant on Google Maps"
-            src="https://www.google.com/maps?q=Crave+Cafe+%26+Restaurant+Gabon+St+Addis+Ababa&output=embed"
+            title="Caffè Bella & Restaurant on Google Maps"
+            src="https://www.google.com/maps?q=Caff%C3%A8+Bella+%26+Restaurant+Gabon+St+Addis+Ababa&output=embed"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
             className="h-72 w-full border-0"

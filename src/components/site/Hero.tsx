@@ -10,7 +10,7 @@ export function Hero() {
     <header className="relative isolate min-h-[92vh] overflow-hidden">
       <img
         src={heroImage}
-        alt="Creamy pesto tagliatelle with chicken served at Crave Cafe & Restaurant"
+        alt="Creamy pesto tagliatelle with chicken served at Caffè Bella & Restaurant"
         width={1080}
         height={720}
         className="absolute inset-0 -z-20 h-full w-full object-cover"
@@ -21,13 +21,13 @@ export function Hero() {
         <a href="#" className="flex items-center gap-3">
           <img
             src={logoImage}
-            alt="Crave Cafe & Restaurant logo"
+            alt="Caffè Bella & Restaurant logo"
             width={96}
             height={96}
             className="h-11 w-11 rounded-full object-cover"
           />
           <span className="font-display text-xl tracking-wide">
-            Crave<span className="text-gradient-ember"> Cafe</span>
+            Caffè Bella
           </span>
         </a>
 

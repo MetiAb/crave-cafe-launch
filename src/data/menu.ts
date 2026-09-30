@@ -24,7 +24,7 @@ export const MENU_CATEGORIES: MenuCategory[] = [
 export const MENU_ITEMS: MenuItem[] = [
   // Starters
   {
-    name: "Crave Special Salad",
+    name: "Caffe Bella Special Salad",
     price: 696,
     description: "Lettuce with feta cheese, fresh tomato, cucumber, avocado, grilled chicken",
     category: "Starters",
@@ -344,7 +344,7 @@ export const MENU_ITEMS: MenuItem[] = [
 ];
 
 export const RESTAURANT = {
-  name: "Crave Cafe & Restaurant",
+  name: "Caffè Bella & Restaurant",
   instagram: "@crave_cafeandrestaurant",
   instagramHref: "https://www.instagram.com/crave_cafeandrestaurant?igsi=MXJ1ZDh3OHIwaXpzaQ==",
   phone: "090 536 3336",
@@ -354,7 +354,7 @@ export const RESTAURANT = {
 
   email: "metiabera24@gmail.com",
   address: "Gabon St, Addis Ababa",
-  mapsHref: "https://www.google.com/maps/search/?api=1&query=Crave+Cafe+%26+Restaurant+Gabon+St+Addis+Ababa",
+  mapsHref: "https://www.google.com/maps/search/?api=1&query=Caff%C3%A8+Bella+%26+Restaurant+Gabon+St+Addis+Ababa",
   hours: "Open daily · Closes 10:00 PM",
   rating: 4.3,
   reviews: 195,

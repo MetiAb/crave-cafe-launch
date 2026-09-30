@@ -9,14 +9,14 @@ export function Footer() {
           <div className="flex items-center gap-3">
             <img
               src="/images/favicon.png"
-              alt="Crave Cafe & Restaurant logo"
+              alt="Caffè Bella & Restaurant logo"
               width={96}
               height={96}
               loading="lazy"
               className="h-12 w-12 rounded-full object-cover"
             />
             <p className="font-display text-2xl">
-              Crave<span className="text-gradient-ember"> Cafe &amp; Restaurant</span>
+              Caffè Bella<span className="text-gradient-ember"> &amp; Restaurant</span>
             </p>
           </div>
           <p className="mt-3 max-w-sm text-sm text-muted-foreground">
@@ -58,7 +58,7 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-border/60 py-5 text-center text-xs text-muted-foreground">
-        © {new Date().getFullYear()} Crave Cafe &amp; Restaurant. All rights reserved.
+        © {new Date().getFullYear()} Caffè Bella &amp; Restaurant. All rights reserved.
       </div>
     </footer>
   );
