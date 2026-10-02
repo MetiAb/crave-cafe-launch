@@ -101,7 +101,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Pizza & Wraps",
   },
   {
-    name: "Crave Special Pizza",
+    name: "Caffè Bella Special Pizza",
     price: 835,
     description: "Beef & chicken with margherita sauce & mixed cheese",
     category: "Pizza & Wraps",
@@ -345,8 +345,8 @@ export const MENU_ITEMS: MenuItem[] = [
 
 export const RESTAURANT = {
   name: "Caffè Bella & Restaurant",
-  instagram: "@crave_cafeandrestaurant",
-  instagramHref: "https://www.instagram.com/crave_cafeandrestaurant?igsi=MXJ1ZDh3OHIwaXpzaQ==",
+  instagram: "@caffebella",
+  instagramHref: "https://www.instagram.com/caffebella",
   phone: "090 536 3336",
   phoneHref: "tel:+251905363336",
   phoneAlt: "+251 11 557 4853",
